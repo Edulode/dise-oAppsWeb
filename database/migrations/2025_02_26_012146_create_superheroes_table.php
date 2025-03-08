@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('universes', function (Blueprint $table) {
+        Schema::create('superheroes', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->unique();
+            $table->string('real_name', 50);
+            $table->foreignId('universe_id')->constrained('universes')->onDelete('cascade');
+            $table->foreignId('gender_id')->constrained('genders')->onDelete('cascade');
+            $table->string('picture', 200)->nullable();
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('universes');
+        Schema::dropIfExists('superheroes');
     }
 };
