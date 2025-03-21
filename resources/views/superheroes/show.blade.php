@@ -6,6 +6,9 @@
     <title>Superheroe</title>
 </head>
 <body>
+    <hr>
+    <a href="{{ route('superheroes.index') }}">Back</a>
+    <hr>
     <h2>Detalle del Registro</h2>
     <p><strong>ID:</strong> {{ $superheroe->id }}</p>
     <p><strong>Name:</strong> {{ $superheroe->name }}</p>

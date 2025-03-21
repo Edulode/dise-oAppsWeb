@@ -7,6 +7,9 @@
 </head>
 <body>
 <h1>Superheroes</h1>
+    <hr>
+    <a href="{{ route('superheroes.create') }}">Create new superhero</a>
+    <hr>
     <table>
         <thead>
             <tr>
@@ -27,6 +30,15 @@
                     <td>{{ $item->universe_id }}</td>
                     <td>{{ $item->gender_id }}</td>
                     <td>{{ $item->picture }}</td>
+                    <td>
+                        <a href="{{route('superheroes.show',$item->id) }}">Show</a>
+                        <a href="{{route('superheroes.edit',$item->id) }}">Edit</a>
+                        <form action="{{ route('superheroes.destroy', $item->id) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="Delete" onclick = "return confirm('Are you sure?')">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

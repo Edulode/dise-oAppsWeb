@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>Create Superheroe</h1>
+    <hr>
+    <a href="{{ route('superheroes.index') }}">Back</a>
+    <hr>
     <form action="{{ route('superheroes.store') }}" method="post">
         @csrf
         <label for="name">Name</label>
