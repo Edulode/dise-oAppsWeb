@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,9 @@
 </head>
 <body>
     <h1>Create universe</h1>
+    <hr>
+    <a href="{{ route('universes.index') }}">Back</a>
+    <hr>
     <form action="{{ route('universes.store') }}" method="post">
         @csrf
         <label for="name">Name</label>
@@ -15,3 +20,4 @@
     </form>
 </body>
 </html>
+@endsection

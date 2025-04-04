@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,3 +22,4 @@
     <p><strong>Updated at:</strong> {{ $superheroe->updated_at }}</p>
 </body>
 </html>
+@endsection

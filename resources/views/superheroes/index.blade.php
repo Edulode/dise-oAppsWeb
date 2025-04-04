@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +29,8 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->real_name }}</td>
-                    <td>{{ $item->universe_id }}</td>
-                    <td>{{ $item->gender_id }}</td>
+                    <td>{{ $item->universe->name }}</td>
+                    <td>{{ $item->gender->name }}</td>
                     <td>{{ $item->picture }}</td>
                     <td>
                         <a href="{{route('superheroes.show',$item->id) }}">Show</a>
@@ -45,3 +47,4 @@
     </table>
 </body>
 </html>
+@endsection

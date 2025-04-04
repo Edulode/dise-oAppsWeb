@@ -1,5 +1,7 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
+@section('content')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,3 +40,4 @@
     </table>
 </body>
 </html>
+@endsection

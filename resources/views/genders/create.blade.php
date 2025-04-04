@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,10 @@
     <title>Create gender</title>
 </head>
 <body>
+<h1>Gender</h1>
+    <hr>
+    <a href="{{ route('genders.index') }}">Back</a>
+    <hr>
     <h1>Create gender</h1>
     <form action="{{ route('genders.store') }}" method="post">
         @csrf
@@ -15,3 +21,4 @@
     </form>
 </body>
 </html>
+@endsection
